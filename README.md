@@ -7,4 +7,7 @@
  - ## 1B
     - Book With single author
     - Book with multiple author
+ - ## Inheritance
+    - Person,Student and Faculty Hierarchy
+    - Various Shapes
 
