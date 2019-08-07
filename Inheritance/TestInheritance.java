@@ -19,6 +19,10 @@ class Person{
 		return address;
 	}
 
+	public int getAadhaar(){
+		return aadhaar;
+	}
+
 	public void setAddress(String address){
 		this.address = address;
 	}
@@ -114,16 +118,11 @@ class Faculty extends Person{
 }
 
 class TestInheritance{
-	
-	
-	public static void main(String[] args){
+	public static Person getPerson(){
 		java.util.Scanner input = new java.util.Scanner(System.in);
-		int aadhaar,year;
-		String name,address,program,designation,department;
+		String name,address;
+		int aadhaar;
 		char gender;
-		float basicpay,total;
-		
-		System.out.println("ENTER STUDENT DETAILS");		
 		System.out.print("Enter the name     : ");
 		name = input.nextLine();
 		System.out.print("Enter aadhaar      : ");
@@ -133,6 +132,34 @@ class TestInheritance{
 		address = input.nextLine();
 		System.out.print("Enter the gender   : ");
 		gender = input.nextLine().charAt(0);
+		return new Person(aadhaar,name,address,gender);
+
+	}
+	
+	public static void main(String[] args){
+		java.util.Scanner input = new java.util.Scanner(System.in);
+		int aadhaar,year;
+		String name,address,program,designation,department;
+		char gender;
+		float basicpay,total;
+		Person p;
+		
+		System.out.println("ENTER STUDENT DETAILS");		
+		/*System.out.print("Enter the name     : ");
+		name = input.nextLine();
+		System.out.print("Enter aadhaar      : ");
+		aadhaar = input.nextInt();
+		input.nextLine();
+		System.out.print("Enter the address  : ");
+		address = input.nextLine();
+		System.out.print("Enter the gender   : ");
+		gender = input.nextLine().charAt(0);
+		*/
+		p = getPerson();
+		name = p.getName();
+		address = p.getAddress();
+		aadhaar = p.getAadhaar();
+		gender = p.getGender();
 		System.out.print("Enter the program  : ");
 		program = input.nextLine();
 		System.out.print("Enter the year     : ");
@@ -144,7 +171,7 @@ class TestInheritance{
 		
 		System.out.println("--------------------------------------------------------");
 
-		System.out.println("ENTER FACULTY DETAILS");		
+		/*System.out.println("ENTER FACULTY DETAILS");		
 		System.out.print("Enter the name     : ");
 		name = input.nextLine();
 		System.out.print("Enter aadhaar      : ");
@@ -154,6 +181,12 @@ class TestInheritance{
 		address = input.nextLine();
 		System.out.print("Enter the gender   : ");
 		gender = input.nextLine().charAt(0);
+		*/
+		p = getPerson();
+		name = p.getName();
+		aadhaar = p.getAadhaar();
+		address = p.getAddress();
+		gender = p.getGender();
 		System.out.print("Enter Designation  : ");
 		designation = input.nextLine();
 		System.out.print("Enter Department   : ");
@@ -166,6 +199,7 @@ class TestInheritance{
 		System.out.println("STUDENT DETAILS");
 		System.out.println("Name        : " + s.getName());
 		System.out.println("Address     : " + s.getAddress());
+		System.out.println("Aadhaar     : " + s.getAadhaar());
 		System.out.println("Gender      : " + s.getGender());
 		System.out.println("Program     : " + s.getProgram());
 		System.out.println("Year        : " + s.getYear());
@@ -176,6 +210,7 @@ class TestInheritance{
 		System.out.println("FACULTY DETAILS");
 		System.out.println("Name        : " + f.getName());
 		System.out.println("Address     : " + f.getAddress());
+		System.out.println("Aadhaar     : " + f.getAadhaar());
 		System.out.println("Gender      : " + f.getGender());
 		System.out.println("Designation : " + f.getDesig());
 		System.out.println("Basic Pay   : " + f.getBasic());

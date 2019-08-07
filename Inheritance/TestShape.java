@@ -160,7 +160,7 @@ class TestShape{
 		Square s[] = {new Square(),new Square(dim1),new Square(dim1,color)};
 		Rectangle sq[] = s;
 
-		System.out.println("\n************************************************************\n");
+		System.out.println("\n*********************************************************************\n");
 
 
 		System.out.println("CIRCLE DETAILS\n");
@@ -168,63 +168,63 @@ class TestShape{
 		System.out.println("Area      = " + c[0].getArea());
 		System.out.println("Perimeter = " + c[0].getPerimeter());
 		System.out.println("Color     = " + c[0].getColor());
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 
 		System.out.println("Circle With 1 parameter constructor Circle(radius)");
 		System.out.println("Area      = " + c[1].getArea());
 		System.out.println("Perimeter = " + c[1].getPerimeter());
 		System.out.println("Color     = " + c[1].getColor());	
 
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 		
 		System.out.println("Circle with 2 parameter constructor Circle(radius,color):");
 		System.out.println("Area      = " + c[2].getArea());
 		System.out.println("Perimeter = " + c[2].getPerimeter());
 		System.out.println("Color     = " + c[2].getColor());	
 
-		System.out.println("\n************************************************************\n");
+		System.out.println("\n*********************************************************************\n");
 
 		System.out.println("RECTANGLE DETAILS\n");
 		System.out.println("Rectangle with default constructor Rectangle():");
 		System.out.println("Area      = " + r[0].getArea());
 		System.out.println("Perimeter = " + r[0].getPerimeter());
 		System.out.println("Color     = " + r[0].getColor());
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 
 		System.out.println("Rectangle With 1 parameter constructor Rectangle(width)");
 		System.out.println("Area      = " + r[1].getArea());
 		System.out.println("Perimeter = " + r[1].getPerimeter());
 		System.out.println("Color     = " + r[1].getColor());	
 
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 		
 		System.out.println("Rectangle with 2 parameter constructor Rectangle(width,length):");
 		System.out.println("Area      = " + r[2].getArea());
 		System.out.println("Perimeter = " + r[2].getPerimeter());
 		System.out.println("Color     = " + r[2].getColor());	
 
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 
 		System.out.println("Rectangle with 3 parameter constructor Rectangle(width,length,color)");
 		System.out.println("Area      = " + r[3].getArea());
 		System.out.println("Perimeter = " + r[3].getPerimeter());
 		System.out.println("Color     = " + r[3].getColor());	
 
-		System.out.println("\n************************************************************\n");
+		System.out.println("\n*********************************************************************\n");
 		
 		System.out.println("SQUARE DETAILS\n");
 		System.out.println("Square with default constructor Square():");
 		System.out.println("Area      = " + sq[0].getArea());
 		System.out.println("Perimeter = " + sq[0].getPerimeter());
 		System.out.println("Color     = " + sq[0].getColor());
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 
 		System.out.println("Square With 1 parameter constructor Square(side)");
 		System.out.println("Area      = " + sq[1].getArea());
 		System.out.println("Perimeter = " + sq[1].getPerimeter());
 		System.out.println("Color     = " + sq[1].getColor());	
 
-		System.out.println("\n------------------------------------------------------------\n");
+		System.out.println("\n---------------------------------------------------------------------\n");
 		
 		System.out.println("Square with 2 parameter constructor Square(side,color):");
 		System.out.println("Area      = " + sq[2].getArea());
