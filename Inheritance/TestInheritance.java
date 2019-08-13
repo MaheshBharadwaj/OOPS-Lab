@@ -145,16 +145,6 @@ class TestInheritance{
 		Person p;
 		
 		System.out.println("ENTER STUDENT DETAILS");		
-		/*System.out.print("Enter the name     : ");
-		name = input.nextLine();
-		System.out.print("Enter aadhaar      : ");
-		aadhaar = input.nextInt();
-		input.nextLine();
-		System.out.print("Enter the address  : ");
-		address = input.nextLine();
-		System.out.print("Enter the gender   : ");
-		gender = input.nextLine().charAt(0);
-		*/
 		p = getPerson();
 		name = p.getName();
 		address = p.getAddress();
@@ -170,18 +160,6 @@ class TestInheritance{
 		Student s = new Student(aadhaar,name,address,gender,program,year,total);
 		
 		System.out.println("--------------------------------------------------------");
-
-		/*System.out.println("ENTER FACULTY DETAILS");		
-		System.out.print("Enter the name     : ");
-		name = input.nextLine();
-		System.out.print("Enter aadhaar      : ");
-		aadhaar = input.nextInt();
-		input.nextLine();
-		System.out.print("Enter the address  : ");
-		address = input.nextLine();
-		System.out.print("Enter the gender   : ");
-		gender = input.nextLine().charAt(0);
-		*/
 		p = getPerson();
 		name = p.getName();
 		aadhaar = p.getAadhaar();
