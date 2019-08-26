@@ -130,10 +130,13 @@ class Square extends Rectangle{
 class TestAbstract{
 	public static void main(String[] args){
 		java.util.Scanner input = new java.util.Scanner(System.in);
+
+		float dim1,dim2;
+		
+
 	}
 }
 
 
-}
 
 
