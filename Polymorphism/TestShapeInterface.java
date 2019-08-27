@@ -1,28 +1,13 @@
-abstract class Shape{
-	protected String color;
-
-	Shape(){
-		color = "red";
-	}
-
-	public Shape(String color){
-		this.color = color;
-	}
-
-	public String getColor(){
-		return color;
-	}
-
- 	public void setColor(String color){
- 		this.color = color;
- 	}
-
- 	abstract public float getArea();
- 	abstract public float getPerimeter();
+interface Shape{
+	public String color = "red";
+	//public String getColor();
+ 	//public void setColor(String color);
+ 	public float getArea();
+ 	public float getPerimeter();
 }
 
 
-class Circle extends Shape{
+class Circle implements Shape{
 	protected float radius;
 
 	public Circle(){
@@ -32,12 +17,12 @@ class Circle extends Shape{
 	public Circle(float radius){
 		this.radius = radius;
 	}
-
+	/*
 	public Circle(float radius,String color){
-		super(color);
+		color
 		this.radius = radius;
 	}
-
+	*/
 	public float getRadius(){
 		return radius;
 	}
@@ -47,15 +32,15 @@ class Circle extends Shape{
 	}
 
 	public float getArea(){
-		return 3.14 * radius * radius;
+		return 3.14f * radius * radius;
 	}
 
 	public float getPerimeter(){
-		return 2 * 3.14 * radius;
+		return 2 * 3.14f * radius;
 	}
 }
 
-class Rectangle extends Shape{
+class Rectangle implements Shape{
 	protected float width;
 	protected float length;
 
@@ -67,13 +52,13 @@ class Rectangle extends Shape{
 		this.width = width;
 		this.length = length;
 	}
-
+	/*
 	public Rectangle(float width,float length,String color){
 		super(color);
 		this.width = width;
 		this.length = length;
 	}
-
+	*/
 	public float getWidth(){
 		return width;
 	}
@@ -108,11 +93,11 @@ class Square extends Rectangle{
 	public Square(float side){
 		super(side,side);
 	}
-
+	/*
 	public Square(float side,String color){
 		super(side,side,color);
 	}
-
+	*/
 	public float getSide(){
 		return getLength();
 	}
@@ -131,7 +116,7 @@ class Square extends Rectangle{
 	}
 }
 
-class TestAbstract{
+class TestShapeInterface{
 	public static void main(String[] args){
 		java.util.Scanner input = new java.util.Scanner(System.in);
 
@@ -140,7 +125,7 @@ class TestAbstract{
 
 		System.out.print("Enter the radius of the circle: ");
 		radius = input.nextFloat();
-		Shape s[] = 		
+	
 
 	}
 }
