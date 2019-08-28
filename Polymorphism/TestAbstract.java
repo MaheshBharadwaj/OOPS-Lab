@@ -16,9 +16,11 @@ abstract class Shape{
  	public void setColor(String color){
  		this.color = color;
  	}
+	
 
  	abstract public float getArea();
  	abstract public float getPerimeter();
+ 	
 }
 
 
@@ -47,11 +49,18 @@ class Circle extends Shape{
 	}
 
 	public float getArea(){
-		return 3.14 * radius * radius;
+		return 3.14f * radius * radius;
 	}
 
 	public float getPerimeter(){
-		return 2 * 3.14 * radius;
+		return 2 * 3.14f * radius;
+	}
+	
+	public String toString(){
+		return "The details of the circle are\n" + 
+			   "Color       : " + getColor() + "\n" +  
+			   "Area        : " + getArea() + "\n" +
+			   "Perimeter   : " + getPerimeter() + "\n";
 	}
 }
 
@@ -97,6 +106,13 @@ class Rectangle extends Shape{
 	public float getPerimeter(){
 		return 2 * ( length + width);
 	}
+	
+	public String toString(){
+		return "The details of the rectangle are\n" +
+			   "Color       : " + getColor() + "\n" + 
+			   "Area        : " + getArea() + "\n" +
+			   "Perimeter   : " + getPerimeter() + "\n";
+	}
 
 }
 
@@ -129,6 +145,14 @@ class Square extends Rectangle{
 	public float getPerimeter(){
 		return super.getPerimeter();
 	}
+	
+	public String toString(){
+		return "The details of the square are\n" +
+			   "Color       : " + getColor() + "\n" +  
+			   "Area        : " + getArea() + "\n" +
+			   "Perimeter   : " + getPerimeter() + "\n";
+	}
+	
 }
 
 class TestAbstract{
@@ -136,12 +160,43 @@ class TestAbstract{
 		java.util.Scanner input = new java.util.Scanner(System.in);
 
 		float length,width,side,radius;
-
-
-		System.out.print("Enter the radius of the circle: ");
-		radius = input.nextFloat();
-		Shape s[] = 		
-
+		String color[] = new String[3];
+	
+		System.out.println("-----------------------------------------");
+	
+		System.out.print("Enter the radius of the circle    : ");
+		radius = input.nextFloat(); 
+		System.out.print("Enter the color of the circle     : ");
+		color[0] = input.next();
+		
+		System.out.println("-----------------------------------------");
+		
+		System.out.print("Enter the length of the rectangle : ");
+		length = input.nextFloat();
+		System.out.print("Enter the width of the rectangle  : ");
+		width = input.nextFloat(); 
+		System.out.print("Enter the color of the rectangle  : ");
+		color[1] = input.next();
+		
+		System.out.println("-----------------------------------------");
+		
+		System.out.print("Enter the side of the square      : ");
+		side = input.nextFloat();
+		System.out.print("Enter the color of the square     : ");
+		color[2] = input.next();
+		
+		System.out.println("-----------------------------------------");
+		
+		Shape s[] = { new Circle(),new Circle(radius),new Circle(radius,color[0]),
+		              new Rectangle(),new Rectangle(width,length),new Rectangle(width,length,color[1]),
+					  new Square(), new Square(side),new Square(side,color[2]) };
+					 
+		
+		System.out.println("\n\nTHE DETAILS OF THE OBJECTS\n");
+		for(int i = 0 ; i < s.length ; i++){
+			System.out.println(s[i]);
+			System.out.println("*****************************************");
+		}
 	}
 }
 
