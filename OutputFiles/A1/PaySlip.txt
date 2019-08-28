@@ -1,0 +1,124 @@
+cs1089@u1:~/Documents/OOPS-Lab/A1$ java PaySlip 
+1.Enter details
+2.Display Employee Record
+3.Payslip of an employee
+4.Promotion
+5.Stop
+Enter choice: 
+1
+PaySlip Manager
+Enter no. of employees: 3
+Enter details
+Employee ID              : 1
+Employee name            : Mahesh
+Designation              : Manager
+Date of Birth(DD/MM/YYYY): 23/03/2000
+Date of Join(DD/MM/YYYY) : 12/02/2010
+Basic pay                : 25000
+LIC Premium(0 if not appl.)  : 2000
+*********************************************
+Enter details
+Employee ID              : 2
+Employee name            : Kumar
+Designation              : Analyst 
+Date of Birth(DD/MM/YYYY): 17/02/2001
+Date of Join(DD/MM/YYYY) : 05/06/2016
+Basic pay                : 15000
+LIC Premium(0 if not appl.)  : 0
+*********************************************
+Enter details
+Employee ID              : 3
+Employee name            : Anita
+Designation              : Intern
+Date of Birth(DD/MM/YYYY): 23/02/2001
+Date of Join(DD/MM/YYYY) : 11/11/2017
+No. of hours worked      : 40
+Hourly wage              : 150
+LIC Premium(0 if not appl.)  : 1000
+*********************************************
+Press Enter to continue......
+
+1.Enter details
+2.Display Employee Record
+3.Payslip of an employee
+4.Promotion
+5.Stop
+Enter choice: 
+2
+PAYSLIP
+ID              : 1
+Name            : Mahesh
+Designation     : Manager
+DOB             : 23/03/2000
+DOJ             : 12/02/2010
+
+Net Salary      : 33500.0
+*********************************************
+PAYSLIP
+ID              : 2
+Name            : Kumar
+Designation     : Analyst
+DOB             : 17/02/2001
+DOJ             : 05/06/2016
+
+Net Salary      : 19800.0
+*********************************************
+PAYSLIP
+ID              : 3
+Name            : Anita
+Designation     : Intern
+DOB             : 23/02/2001
+DOJ             : 11/11/2017
+
+Net Salary      : 7500.0
+*********************************************
+Press Enter to continue......
+
+1.Enter details
+2.Display Employee Record
+3.Payslip of an employee
+4.Promotion
+5.Stop
+Enter choice: 
+3
+Enter id of employee to view payslip: 1
+PAYSLIP
+ID              : 1
+Name            : Mahesh
+Designation     : Manager
+DOB             : 23/03/2000
+DOJ             : 12/02/2010
+
+Basic Pay       : 25000.0
+DA              : 10000.0
+HRA             : 2500.0
+LIC             : 2000.0
+PF              : 2000.0
+
+Gross Salary    : 37500.0
+Deductions      : 4000.0
+                  ---------
+Net Salary      : 33500.0
+                  ---------
+*********************************************
+Press Enter to continue......
+
+1.Enter details
+2.Display Employee Record
+3.Payslip of an employee
+4.Promotion
+5.Stop
+Enter choice: 
+4
+Enter id of employee to promote: 3
+Enter designation to promote: 
+Analyst
+Enter basic pay: 
+12500
+Promotion Succesfull!
+Press Enter to continue......
+
+
+
+
+

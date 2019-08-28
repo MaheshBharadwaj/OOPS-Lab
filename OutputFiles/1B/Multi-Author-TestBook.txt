@@ -1,0 +1,56 @@
+cs1089@u1:~/Documents/OOPS-Lab/1B/MultiAuthor$ java TestBook 
+ENTER BOOK DETAILS
+Enter name of book  : HTML
+Enter price of book : 500
+Enter quantity      : 100
+-----------------------------------------------
+Enter number of Authors    : 2
+ENTER AUTHOR DETAILS
+Enter name of author       : Anita
+Enter email of author      : anita@234.com
+Enter the gender of author : F
+ENTER AUTHOR DETAILS
+Enter name of author       : Ashwin
+Enter email of author      : ashwin@yahoo.com
+Enter the gender of author : M
+------------------------------------------------
+ENTER BOOK DETAILS
+Enter name of book  : AppDevelopement
+Enter price of book : 599
+Enter quantity      : 100
+-----------------------------------------------
+Enter number of Authors    : 3
+ENTER AUTHOR DETAILS
+Enter name of author       : Kern 
+Enter email of author      : k@gmail.com
+Enter the gender of author : M
+ENTER AUTHOR DETAILS
+Enter name of author       : Johnathon
+Enter email of author      : john@press.com
+Enter the gender of author : M
+ENTER AUTHOR DETAILS
+Enter name of author       : Leslie
+Enter email of author      : leslie@gmail.com
+Enter the gender of author : F
+------------------------------------------------
+BOOK DETAILS
+Name         : HTML
+Author       : Anita
+Author E-Mail: anita@234.com
+Author       : Ashwin
+Author E-Mail: ashwin@yahoo.com
+Price        : 500.0
+Quantity     : 100
+------------------------------------------------
+BOOK DETAILS
+Name         : AppDevelopement
+Author       : Kern
+Author E-Mail: k@gmail.com
+Author       : Johnathon
+Author E-Mail: john@press.com
+Author       : Leslie
+Author E-Mail: leslie@gmail.com
+Price        : 599.0
+Quantity     : 100
+------------------------------------------------
+

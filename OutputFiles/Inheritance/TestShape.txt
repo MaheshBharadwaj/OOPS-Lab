@@ -1,0 +1,87 @@
+cs1089@u1:~/Documents/OOPS-Lab/Inheritance$ java TestShape 
+ENTER DETAILS OF CIRCLE
+Enter the radius    : 7.0
+Enter the color     : Orange	
+
+ENTER DETAILS OF RECTANGLE
+Enter the length    : 12.0
+Enter the width     : 20.0
+Enter the color     : Violet 
+
+ENTER DETAILS OF SQUARE
+Enter the side      : 5.0
+Enter the color     : Orange
+
+*********************************************************************
+
+CIRCLE DETAILS
+
+Default constructor Circle():
+Area      = 3.14
+Perimeter = 6.28
+Color     = Red
+
+---------------------------------------------------------------------
+
+1 parameter constructor Circle(radius)
+Area      = 153.86002
+Perimeter = 43.960003
+Color     = Red
+
+---------------------------------------------------------------------
+
+2 parameter constructor Circle(radius,color)
+Area      = 153.86002
+Perimeter = 43.960003
+Color     = Orange
+
+
+*********************************************************************
+
+RECTANGLE DETAILS
+
+Default constructor Rectangle():
+Area      = 1.0
+Perimeter = 4.0
+Color     = Red
+
+---------------------------------------------------------------------
+
+2 parameter constructor Rectangle(width,length)
+Area      = 240.0
+Perimeter = 64.0
+Color     = Red
+
+---------------------------------------------------------------------
+
+3 parameter constructor Rectangle(width,length,color)
+Area      = 240.0
+Perimeter = 64.0
+Color     = Violet
+
+
+
+*********************************************************************
+
+Default constructor Sqaure():
+Area      = 1.0
+Perimeter = 4.0
+Color     = Red
+
+---------------------------------------------------------------------
+
+1 parameter constructor Sqaure(side)
+Area      = 25.0
+Perimeter = 20.0
+Color     = Red
+
+---------------------------------------------------------------------
+
+2 parameter constructor Sqaure(side,color)
+Area      = 25.0
+Perimeter = 20.0
+Color     = Orange
+
+---------------------------------------------------------------------
+
+

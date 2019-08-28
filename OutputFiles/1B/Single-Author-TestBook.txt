@@ -1,0 +1,36 @@
+cs1089@u1:~/Documents/OOPS-Lab/1B/SingleAuthor$ java TestBook 
+ENTER BOOK DETAILS
+Enter name of book  : HTML
+Enter price of book : 250
+Enter quantity      : 100
+-----------------------------------------------
+ENTER AUTHOR DETAILS
+Enter name of author       : Kumar
+Enter email of author      : kumar@123.com
+Enter the gender of author : M
+------------------------------------------------
+ENTER BOOK DETAILS
+Enter name of book  : C++
+Enter price of book : 500
+Enter quantity      : 50
+-----------------------------------------------
+ENTER AUTHOR DETAILS
+Enter name of author       : Anne
+Enter email of author      : anne@gmail.com
+Enter the gender of author : F
+------------------------------------------------
+BOOK DETAILS
+Name         : HTML
+Author       : Kumar
+Author E-Mail: kumar@123.com
+Price        : 250.0
+Quantity     : 100
+------------------------------------------------
+BOOK DETAILS
+Name         : C++
+Author       : Anne
+Author E-Mail: anne@gmail.com
+Price        : 500.0
+Quantity     : 50
+------------------------------------------------
+

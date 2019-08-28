@@ -1,0 +1,16 @@
+cs1089@u1:~/Documents/OOPS-Lab/A1$ java NumberGuess 
+Enter your guess [0 -99]: 50
+Try Higher!
+Enter your guess [0 -99]: 75
+Try Higher!
+Enter your guess [0 -99]: 87
+Try Higher!
+Enter your guess [0 -99]: 93
+Try Higher!
+Enter your guess [0 -99]: 97
+Try Lower!
+Enter your guess [0 -99]: 95
+Try Lower!
+Enter your guess [0 -99]: 94
+You found the answer (94)  in 7 guesses!
+
