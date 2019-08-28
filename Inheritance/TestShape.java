@@ -177,8 +177,8 @@ class TestShape{
 		System.out.println("RECTANGLE DETAILS\n");
 		for(int i = 0 ; i < 3 ; i++){
 			switch(i){
-				case 0 :System.out.println("Default constructor Rectangle():");						break;
-				case 1: System.out.println("2 parameter constructor Rectangle(width,length)");		break;
+				case 0 :System.out.println("Default constructor Rectangle():");							break;
+				case 1: System.out.println("2 parameter constructor Rectangle(width,length)");			break;
 				case 2: System.out.println("3 parameter constructor Rectangle(width,length,color)");	break;
 			}
 			System.out.println("Area      = " + r[i].getArea());
