@@ -13,7 +13,7 @@ class Account{
 		this.branch = branch;
 		this.balance = balance;
 		this.pan = -1;
-		this.min_bal = 10000;
+		this.min_bal = 5000;
 	}
 
 	public Account(String cname,int pan,int accno,String branch,float balance){
@@ -22,7 +22,7 @@ class Account{
 		this.accno = accno;
 		this.branch = branch;
 		this.balance = balance;
-		this.min_bal = 10000;
+		this.min_bal = 5000;
 	}
 
 	public String getCName(){
@@ -53,14 +53,15 @@ class Account{
 		this.balance = balance;
 	}
 
-	public void deposit(/*int accno,*/float amount) throws PANRequiredException{
+	public void deposit(int accno,float amount) throws PANRequiredException{
 		if(this.accno == accno)
 			if(amount > 50000 && pan == -1)
-				throw new PANRequiredException();
+				throw new PANRequiredException(amount);
 			else this.amount += amount;
 	}
 
-	public void withdraw(/*int accno,*/float amount){
+	public void withdraw(int accno,float amount) throws MinBalRequiredException,NotEnoughMoneyException
+	{
 		if(this.accno == accno)
 			if(amount > balance)
 				throw new NotEnoughMoneyException(balance);
@@ -79,6 +80,56 @@ class Account{
 	} 
 }
 
+class AccountNotFoundException extends Exception{
+	private int accno;
+	
+	AccountNotFoundException(int accno){
+		this.accno = accno;
+	}
+	
+	public String toString(){
+		return "Account number " + accno + " is invalid!";
+	}
+}
+
+class NotEnoughMoneyException extends Exception{
+	private float balance;
+	
+	NotEnoughMoneyException(float balance){
+		this.balance = balance;
+	}
+	
+	public String toString(){
+		return "NotEnoughMoneyException: balance( " + balance + ") insufficient";
+	}
+}
+
+class PANRequiredException extends Exception{
+	private float amount;
+	
+	PANRequiredException(float amount){
+		this.amount = amount;
+	}
+	
+	public toString(){
+		return "PANRequiredException: Amount ( " + amount + " ) greater than 50000";
+	}
+}
+
+class MinBalRequiredException extends Exception{
+	private float balance;
+	
+	MinBalRequiredException(float amount){
+		this.amount = amount;
+	}
+	
+	public String toString(){
+		return "Mininum Balance Required!";
+	}
+}
+	
+	
+
 class TestException{
 	static Account search(Account[] acc,int accno){
 		int index = -1;
@@ -91,4 +142,7 @@ class TestException{
 			throw new AccountNotFoundException(accno);
 		return acc[index];
 	}
+	
+	public static void main(String[] args){
+		
 }
