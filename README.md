@@ -17,4 +17,7 @@
  - ## Packages & Exception Handling
     - Currency convertor 
     - Bank Account with custom Exception
+ - ## Generics
+    - Stack to push,pop and display generic values
+    - Generic class to compare objects of a data type
  
