@@ -2,6 +2,7 @@ class Stack<T>{
 	int top;
 	T a[];
 	int capacity;
+	
 	Stack(int n,T arr[]){
 		top = -1;
 		capacity = n;	
@@ -21,8 +22,8 @@ class Stack<T>{
 			System.out.println("Stack full!");
 		else
 			a[++top]=x;
-
 	}
+
 	T pop(){
 		if(isEmpty()){
 			System.out.println("Stack Empty!");
@@ -30,8 +31,8 @@ class Stack<T>{
 		}
 	
 		return a[top--];
-
 	}
+
 	void display(){
 		int i;
 		if(isEmpty())
@@ -48,14 +49,11 @@ class TestStack{
 	public static void main(String[] args){
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
-		
 	
+		int opt = 0;
+		int ch = 0;
 		
-		int stop = 0;
-		int opt;
-		int ch;
-		
-		while(!stop){
+		while(opt != 4){
 			System.out.println("1 - Integer Stack");
 			System.out.println("2 - Double Stack");
 			System.out.println("3 - String Stack");
@@ -66,7 +64,7 @@ class TestStack{
 			switch(opt){
 				case 1: {
 							int temp;
-							int arr[] = new int[10];
+							Integer arr[] = new Integer[10];
 							Stack<Integer> intStack = new Stack<Integer>(10,arr);
 					
 							while(ch != 4){
@@ -89,7 +87,7 @@ class TestStack{
 											 temp = intStack.pop();
 											 System.out.println("Value Popped: " + temp);
 											 System.out.println("----------------------------");
-											 }
+											}
 											 break;
 									case 3: {
 												intStack.display();
@@ -103,8 +101,8 @@ class TestStack{
 						break;
 				case 2: {
 							double temp;
-							double arr[] = new double[10];
-							Stack<double> dStack = new Stack<double>(10,arr);
+							Double arr[] = new Double[10];
+							Stack<Double> dStack = new Stack<Double>(10,arr);
 					
 							while(ch != 4){
 								System.out.println("1 - Push");
@@ -120,14 +118,14 @@ class TestStack{
 											 temp = input.nextDouble();
 											 dStack.push(temp);
 											 System.out.println("----------------------------");
-											 }
-											 break;
+											}
+											break;
 									case 2: {
 											 temp = dStack.pop();
 											 System.out.println("Value Popped: " + temp);
 											 System.out.println("----------------------------");
-											 }
-											 break;
+											}
+											break;
 									case 3: {
 												dStack.display();
 												System.out.println("----------------------------");
