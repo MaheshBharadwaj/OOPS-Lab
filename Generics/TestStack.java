@@ -1,14 +1,3 @@
-class StackEmptyException extends Exception{
-	public String toString(){
-		return "Stack Empty!";
-	}
-}
-
-class StackFullException extends Exception{
-	public String toString(){
-		return "Stack Full!";
-	}
-}
 class Stack<T>{
 	int top;
 	T a[];
@@ -52,6 +41,18 @@ class Stack<T>{
 	}		
 }
 
+class StackEmptyException extends Exception{
+	public String toString(){
+		return "Stack Empty!";
+	}
+}
+
+class StackFullException extends Exception{
+	public String toString(){
+		return "Stack Full!";
+	}
+}
+
 
 class TestStack{
 	public static void main(String[] args){
@@ -74,7 +75,7 @@ class TestStack{
 				case 1: {
 							int temp;
 							Integer arr[] = new Integer[10];
-							Stack<Integer> intStack = new Stack<Integer>(10,arr);
+							Stack<Integer> intStack = new Stack<Integer>(4,arr);
 					
 							while(ch != 4){
 								System.out.println("1 - Push");
@@ -94,7 +95,7 @@ class TestStack{
 											 catch(StackFullException e){
 											 	System.out.println(e);
 											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											 }
 											 break;
 									case 2: {
@@ -105,7 +106,7 @@ class TestStack{
 											 catch(StackEmptyException e){
 											 	System.out.println(e);
 											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											}
 											 break;
 									case 3: {
@@ -115,7 +116,7 @@ class TestStack{
  											 catch(StackEmptyException e){
  											 	System.out.println(e);
  											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											}
 											break;
 									case 4: break;
@@ -146,7 +147,7 @@ class TestStack{
 											 catch(StackFullException e){
 											 	System.out.println(e);
 											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											}
 											break;
 									case 2: {
@@ -158,7 +159,7 @@ class TestStack{
 											 	System.out.println(e);
 											 }
 											 
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											}
 											break;
 									case 3: {
@@ -168,7 +169,7 @@ class TestStack{
 												catch(StackEmptyException e){
 													System.out.println(e);
 												}
-												System.out.println("----------------------------");
+												System.out.println("\n----------------------------\n");
 											}
 											break;
 									case 4: break;
@@ -200,7 +201,7 @@ class TestStack{
 											 catch(StackFullException e){
 											 	System.out.println(e);
 											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											 }
 											 break;
 									case 2: {
@@ -211,7 +212,7 @@ class TestStack{
 											 catch(StackEmptyException e){
 											 	System.out.println(e);
 											 }
-											 System.out.println("----------------------------");
+											 System.out.println("\n----------------------------\n");
 											 }
 											 break;
 									case 3: {
@@ -221,7 +222,7 @@ class TestStack{
 												catch(StackEmptyException e){
 													System.out.println(e);
 												}
-												System.out.println("----------------------------");
+												System.out.println("\n----------------------------\n");
 											}
 											break;
 									case 4: break;		

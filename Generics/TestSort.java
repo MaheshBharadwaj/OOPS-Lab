@@ -36,6 +36,7 @@ class TestSort{
 			System.out.println("4 - Exit");
 			System.out.print("Enter your choice: ");
 			opt = input.nextInt();
+			System.out.println("\n----------------------------\n");
 			
 			switch(opt){
 				case 1: {
@@ -54,6 +55,7 @@ class TestSort{
 
 							System.out.println("Sorted Array: ");
 							s.display();
+							System.out.println("\n----------------------------\n");
 						}
 						break;
 				case 2: {
@@ -72,6 +74,7 @@ class TestSort{
 
 							System.out.println("Sorted Array: ");
 							s.display();
+							System.out.println("\n----------------------------\n");
 						}
 						break;
 				case 3: {
@@ -90,6 +93,7 @@ class TestSort{
 
 							System.out.println("Sorted Array: ");
 							s.display();
+							System.out.println("\n----------------------------\n");
 						}
 						break;
 			}
