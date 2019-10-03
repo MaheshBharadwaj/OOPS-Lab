@@ -20,4 +20,8 @@
  - ## Generics
     - Stack to push,pop and display generic values
     - Generic class to compare objects of a data type
- 
+ - ## Collections
+    - ArrayList without using methods in Collection
+    - Doubly Linked List using LinkedList Collection
+ - ## Mini Project - Airline Reservation System
+  
