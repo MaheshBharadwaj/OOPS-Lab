@@ -11,7 +11,15 @@ class EconomyClassTicket implements Ticket{
 		this.price = price;
 		setLocation();
 	}
-
+	
+	public String spaces(String s){
+		String k = "";
+		for(int i = s.length();i<20;i++){
+			//System.out.print(" ");
+			k+=" ";
+		}
+		return k;   
+	}
 
 	public void bookTicket(){
 		booked = true;
@@ -49,8 +57,8 @@ class EconomyClassTicket implements Ticket{
 
 
 	public String toString(){
-		return " FROM           : " + f.getSource() + "\t\t\t" + "DEPARTURE : " + f.getDeparture() + "\n" +
-			   " DESTINATION    : " + f.getDestination() + "\t\t\t" + "ARRIVAL: " + f.getArrival() + "\n\n" +
+		return " FROM           : " + f.getSource() + spaces(f.getSource()) +      "DEPARTURE : " + f.getDeparture() + "\n" +
+			   " DESTINATION    : " + f.getDestination() + spaces(f.getDestination()) + "ARRIVAL   : " + f.getArrival() + "\n\n" +
 			   " --------------------------------------------------------------------------------\n\n" +
 			   " CLASS          : Economy" + "\n" + 
 			   " SEAT NO        : " + seatNo + " " + location + "\n" +

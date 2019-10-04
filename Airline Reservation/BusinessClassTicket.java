@@ -12,6 +12,14 @@ class BusinessClassTicket implements Ticket{
 		setLocation();
 	}
 
+	public String spaces(String s){
+		String k = "";
+		for(int i = s.length();i<20;i++){
+			//System.out.print(" ");
+			k+=" ";
+		}
+		return k;   
+	}
 	public Flight getFlight(){
 		return f;
 	}
@@ -47,8 +55,8 @@ class BusinessClassTicket implements Ticket{
 
 
 	public String toString(){
-		return " FROM           : " + f.getSource() + "\t\t\t" +      "DEPARTURE : " + f.getDeparture() + "\n" +
-			   " DESTINATION    : " + f.getDestination() + "\t\t\t" + "ARRIVAL   : " + f.getArrival() + "\n\n" +
+		return " FROM           : " + f.getSource() + spaces(f.getSource()) +      "DEPARTURE : " + f.getDeparture() + "\n" +
+			   " DESTINATION    : " + f.getDestination() + spaces(f.getDestination()) + "ARRIVAL   : " + f.getArrival() + "\n\n" +
 			   " --------------------------------------------------------------------------------" + "\n\n" +
 			   " CLASS          : Business" + "\n" + 
 			   " SEAT NO        : " + seatNo + " " + location + "\n" +

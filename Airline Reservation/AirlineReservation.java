@@ -135,36 +135,51 @@ class AirlineReservation{
 										System.out.print(" Please enter a valid flight number");
 									}
 									else{
-										System.out.print(" Enter the catergory[Business/Economy]: ");
-										catergory = input.nextLine();
-
+										System.out.println(" Enter the number of tickets to book: ");
+										int number = input.nextInt();
+										input.nextLine();
+											
 										int index = fArr.indexOf(f);	
-										try{
-											t = fArr.get(index).bookTicket(catergory);
+								
+										if(number > 0){
+											clearScreen();
+											System.out.println("\t\t\t\tENTER PASSENGER DETAILS\n");
+														
+											System.out.print(" Enter the catergory[Business/Economy]: ");
+											catergory = input.nextLine();
 
-											System.out.print(" Enter the name       : ");
-											name = input.nextLine();
-											System.out.print(" Enter the DOB        : ");
-											dob = input.nextLine();
-											System.out.print(" Enter the email      : ");
-											email = input.nextLine();
-											System.out.print(" Enter the PH NO      : ");
-											phoneNumber = input.nextLine();
-											System.out.print(" Enter the passportNo : ");
-											passportNo = input.nextLine();
+											for(int i = 0 ; i < number ; i++){
+												try{
+													t = fArr.get(index).bookTicket(catergory);
 
-											pList.add(new Passenger(name,dob,email,phoneNumber,passportNo,t));
+													System.out.print(" Enter the name       : ");
+													name = input.nextLine();
+													System.out.print(" Enter the DOB        : ");
+													dob = input.nextLine();
+													System.out.print(" Enter the email      : ");
+													email = input.nextLine();
+													System.out.print(" Enter the PH NO      : ");
+													phoneNumber = input.nextLine();
+													System.out.print(" Enter the passportNo : ");
+													passportNo = input.nextLine();
+
+													pList.add(new Passenger(name,dob,email,phoneNumber,passportNo,t));
+												}
+												catch(InsufficientTicketsException ite){
+													System.out.println(ite);
+												}		
+											}
 										}
-										catch(InsufficientTicketsException ite){
-											System.out.println(ite);
-										}		
+										else{
+											System.out.println(" Invalid Input!Please Try again!");
+										}
 									}
 								}
 								catch(NoFlightsException nfe){
 									System.out.println(nfe);
 								}
 								Wait();
-							}
+								}
 							break;
 					case 4:{
 								clearScreen();
@@ -247,7 +262,7 @@ class AirlineReservation{
 								System.out.println(" 2 - All Passengers");
 								System.out.println(" 3 - Back to Main Menu");
 								System.out.println(" ----------------------------");
-								System.out.println(" Enter your choice: ");
+								System.out.print  (" Enter your choice: ");
 								opt = input.nextInt();
 								input.nextLine();
 								switch(opt){
