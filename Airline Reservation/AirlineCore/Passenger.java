@@ -1,4 +1,7 @@
-class Passenger extends Person{
+package AirlineCore;
+
+
+public class Passenger extends Person{
 
 	private String passportNo;
 	private Ticket ticket;

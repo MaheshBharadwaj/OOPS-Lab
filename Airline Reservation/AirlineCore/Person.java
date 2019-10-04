@@ -1,10 +1,12 @@
-abstract class Person{
+package AirlineCore;
+
+public abstract class Person{
 	private String name;
 	private String phoneNumber;
 	private String dob;
     private String email;
 
-	Person(String name, String dob, String email,String phoneNumber){
+	public Person(String name, String dob, String email,String phoneNumber){
 		this.name = name;
 		this.dob = dob;
 		this.email = email;

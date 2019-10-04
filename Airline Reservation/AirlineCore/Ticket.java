@@ -1,4 +1,7 @@
-interface Ticket {
+package AirlineCore;
+
+
+public interface Ticket {
 	public boolean isAvailable();
 	public void setAvailable();
 	public void bookTicket();

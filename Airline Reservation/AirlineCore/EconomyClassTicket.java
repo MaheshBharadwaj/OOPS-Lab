@@ -1,4 +1,7 @@
-class EconomyClassTicket implements Ticket{
+package AirlineCore;
+
+
+public class EconomyClassTicket implements Ticket{
 	private int seatNo;
 	private float price;
 	private char location;//Aisle,Window,Middle

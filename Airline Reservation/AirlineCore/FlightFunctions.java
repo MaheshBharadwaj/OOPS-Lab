@@ -1,13 +1,10 @@
+package AirlineCore;
+
 import java.util.*;
 
-class NoFlightsException extends Exception{
-	public String toString(){
-		return " No Flights Matching Requirements Found!\n";
-	}
-}
 
-class FlightFunctions{
-	static void display(ArrayList<Flight> fList) throws NoFlightsException{
+public class FlightFunctions{
+	public static void display(ArrayList<Flight> fList) throws NoFlightsException{
 		if(fList.size() == 0)
 			throw new NoFlightsException();
 
@@ -15,7 +12,7 @@ class FlightFunctions{
 			System.out.println(fList.get(i));
 	}
 
-	static int search(ArrayList<Flight> fList,String flightNo) throws NoFlightsException{
+	public static int search(ArrayList<Flight> fList,String flightNo) throws NoFlightsException{
 		int rval = -1;
 		for(int i = 0 ; i < fList.size() ; i++)
 			if(fList.get(i).getFlightNo().equals(flightNo))
@@ -25,7 +22,7 @@ class FlightFunctions{
 		return rval;
 	}
 
-	static void searchSource(ArrayList<Flight> fList,String source) throws NoFlightsException{
+	public static void searchSource(ArrayList<Flight> fList,String source) throws NoFlightsException{
 		int count = 0;
 		for(int i = 0 ; i < fList.size() ; i++){
 			Flight tmp = fList.get(i);
@@ -39,7 +36,7 @@ class FlightFunctions{
 	}
 
 
-	static void searchDestination(ArrayList<Flight> fList,String destination) throws NoFlightsException{
+	public static void searchDestination(ArrayList<Flight> fList,String destination) throws NoFlightsException{
 		int count = 0;
 		for(int i = 0 ; i < fList.size() ; i++){
 			Flight tmp = fList.get(i);
@@ -53,7 +50,7 @@ class FlightFunctions{
 	}
 
 
-	static ArrayList<Flight> searchSourceDestination(ArrayList<Flight> fList,String source,String destination)
+	public static ArrayList<Flight> searchSourceDestination(ArrayList<Flight> fList,String source,String destination)
 	throws NoFlightsException{
 		ArrayList<Flight> fArr = new ArrayList<Flight>();
 		

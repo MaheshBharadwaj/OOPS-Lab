@@ -1,36 +1,23 @@
+package AirlineCore;
+
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
-class InvalidDateException extends Exception{
-	public String toString(){
-		return " Invalid Date Exception: Please enter valid dates!\n";
-	}
-}
-
-class InsufficientTicketsException extends Exception{
-	public String toString(){
-		return " No Tickets Available! Please Check again later!\n";
-	}
-}
-
-
-
-class Flight{
+public class Flight{
 	private String flightNo;
 	private String airline;
 	private String source;
 	private String destination;
 	private ArrayList <BusinessClassTicket> businessTicket = new ArrayList<BusinessClassTicket>();
-	private ArrayList <EconomyClassTicket> economyTicket = new ArrayList<EconomyClassTicket>();
+	private ArrayList <EconomyClassTicket>  economyTicket =  new ArrayList<EconomyClassTicket>();
 	private Date arrival;
 	private Date departure;
 	
-	Flight(String flightNo){
+	public Flight(String flightNo){
 		this.flightNo = flightNo;
 	}
 
-	Flight(String flightNo,String airline,String source,String destination,
+	public Flight(String flightNo,String airline,String source,String destination,
 	       String arrival,String departure)
 		  throws InvalidDateException{
 		

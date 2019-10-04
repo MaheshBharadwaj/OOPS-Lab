@@ -1,4 +1,6 @@
-class BusinessClassTicket implements Ticket{
+package AirlineCore;
+
+public class BusinessClassTicket implements Ticket{
 	private int seatNo;
 	private float price;
 	private char location;//Aisle,Window

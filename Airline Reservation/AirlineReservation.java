@@ -1,5 +1,7 @@
 import java.util.*;
 
+import AirlineCore.*;
+
 class AirlineReservation{
 	private static ArrayList<Flight> fList = new ArrayList<Flight>();
 	private static ArrayList<Passenger> pList = new ArrayList<Passenger>();
@@ -142,14 +144,15 @@ class AirlineReservation{
 										int index = fArr.indexOf(f);	
 								
 										if(number > 0){
-											clearScreen();
-											System.out.println("\t\t\t\tENTER PASSENGER DETAILS\n");
-														
-											System.out.print(" Enter the catergory[Business/Economy]: ");
-											catergory = input.nextLine();
-
+											
 											for(int i = 0 ; i < number ; i++){
 												try{
+													clearScreen();
+													System.out.println("\t\t\t\tENTER PASSENGER DETAILS\n");
+														
+													System.out.print(" Enter the catergory[Business/Economy]: ");
+													catergory = input.nextLine();
+
 													t = fArr.get(index).bookTicket(catergory);
 
 													System.out.print(" Enter the name       : ");
